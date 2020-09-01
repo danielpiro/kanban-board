@@ -1,0 +1,30 @@
+﻿<Window x:Class="Presentation.View.ReNameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation.View"
+        mc:Ignorable="d"
+        Title="ReNameWindow" Height="250" Width="500">
+    <Grid Margin="10" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <Label Content="Kanban System" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Content="New Name" FontSize="16"  Grid.Column="0" Grid.Row="0"/>
+                <TextBox Text="{Binding Path=Name, Mode=TwoWay}" Width="200" Height="20"  Grid.Column="1" Grid.Row="0" Margin="5"/>
+            </Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Change name" Name="ChangeName"  Margin="20" FontSize="16" Width="100" IsDefault="True" Click="ChangeName_Click"/>
+                <Button Content="Cancel" Name="Cancel"  Margin="20" FontSize="16" Width="100" Click="Cancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

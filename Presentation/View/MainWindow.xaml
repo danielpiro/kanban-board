@@ -1,0 +1,33 @@
+﻿<Window x:Class="Presentation.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="500">
+    <Grid Margin="10" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical">
+            <Label Content="Kanban System" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Content="Username" FontSize="16" Grid.Column="0" Grid.Row="0"/>
+                <TextBox Text="{Binding Path=Email, Mode=TwoWay}" Width="200" Height="20" Grid.Column="1" Grid.Row="0" Margin="5"/>
+                <Label Content="Password" FontSize="16" Grid.Column="0" Grid.Row="1"/>
+                <TextBox Text="{Binding Path=Password, Mode=TwoWay}" Width="200" Height="20" Grid.Column="1" Grid.Row="1" Margin="5"/>
+            </Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Login" Name="Login" Click="Login_Click" Margin="20" FontSize="16" Width="100" IsDefault="True"/>
+                <Button Content="Register" Name="Register" Click="Register_Click" Margin="20" FontSize="16" Width="100"/>
+            </StackPanel>
+            <Label Content="{Binding Path=Message, Mode=OneWay}" Foreground="Red" HorizontalAlignment="Center" Height="40"/>
+        </StackPanel>
+    </Grid>
+</Window>

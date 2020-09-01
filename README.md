@@ -1,2 +1,2 @@
-# Kanban-Board
-Kanban Board university project using MySQL and WPF for manage multiple tasks
+# kanban
+311434526_207172552_315877357
